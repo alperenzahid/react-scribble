@@ -8,12 +8,14 @@
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "generate-icons": "svgr --icon icons --replace-attr-values \"#fff=currentColor\" -d components/icons"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "classnames": "^2.2.6",
     "next": "^10.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
@@ -24,8 +26,15 @@
     "@storybook/addon-essentials": "^6.1.16",
     "@storybook/addon-links": "^6.1.16",
     "@storybook/react": "^6.1.16",
+    "@svgr/cli": "^5.5.0",
+    "autoprefixer": "^10.2.4",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
-    "style-loader": "^2.0.0"
+    "postcss": "^8.2.4",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.2.3",
+    "prettier": "^2.2.1",
+    "style-loader": "^2.0.0",
+    "tailwindcss": "^2.0.2"
   }
 }
