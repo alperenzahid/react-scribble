@@ -19,3 +19,4 @@ sketch
 # website: https://storybook.js.org/
 
 storybook-static/
+/public/ui/
