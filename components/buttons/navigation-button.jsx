@@ -5,7 +5,6 @@ import styles from './navigation-button.module.css'
 import Button from './button'
 
 function NavigationButton({ notify, children, selected, ...props }) {
-  console.log(`Notify: ${notify}`)
   return (
     <Button
       className={cn(styles.navButton, selected && styles.navButtonSelected)}

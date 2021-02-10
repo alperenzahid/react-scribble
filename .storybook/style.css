@@ -4,5 +4,12 @@
     grid-gap: 20px;
     font-size: 40px;
     padding: 20px;
-    color: white
+    color: white;
+    * + span{
+        font-size: 14px;
+    }
+}
+
+body{
+    padding: 30px
 }

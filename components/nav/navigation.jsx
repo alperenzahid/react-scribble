@@ -1,7 +1,7 @@
 import React from 'react'
-import NavigationButton from './buttons/navigation-button'
-import TitleBold from './title-bold'
-import * as menuItems from './icons/menu'
+import NavigationButton from '../buttons/navigation-button'
+import TextTitle from '../text/text-title'
+import * as menuItems from '../icons/menu'
 let { Twitter } = menuItems
 let navMenuItems = [
   'Home',
@@ -30,7 +30,7 @@ function Navigation({ selectedKey }) {
             notify={item.toLowerCase() === 'notification' ? 4 : false}
           >
             <MenuItem />
-            <TitleBold>{item}</TitleBold>
+            <TextTitle>{item}</TextTitle>
           </NavigationButton>
         )
       })}
