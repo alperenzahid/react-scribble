@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o public/ui",
     "generate-icons": "svgr --icon icons --replace-attr-values \"#fff=currentColor\" -d components/icons"
   },
   "keywords": [],
