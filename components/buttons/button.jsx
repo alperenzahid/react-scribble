@@ -3,7 +3,7 @@ import cn from 'classnames'
 
 import styles from './button.module.css'
 
-function Button({ children, className, full = false, ...props }) {
+function Button({ full = false, children, className, ...props }) {
   return (
     <button
       type="button"

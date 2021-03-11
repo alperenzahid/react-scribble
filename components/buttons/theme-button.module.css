@@ -3,6 +3,7 @@
     color: var(--c-text-color);
     padding: 0 15px;
     height: 40px;
+    min-width: 40px;
     font-weight: bold;
     &:hover{
         background-color: var(--c-theme);
@@ -12,5 +13,6 @@
 
 .bigger{
     height: 47px;
+    min-width: 47px;
 }
 

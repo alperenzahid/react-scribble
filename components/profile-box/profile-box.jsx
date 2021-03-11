@@ -9,17 +9,22 @@ import TextTitle from '../text/text-title'
 import TextBody from '../text/text-body'
 
 export default function ProfileBox({
-  name = 'Zahid Alperen',
-  slug = 'zahidalprn'
+  name = 'zahidalprn',
+  slug = 'zahidalprn',
+  flat = false
 }) {
   return (
     <Button className={cn([styles.box])}>
-      <Photo />
-      <div className={styles.body}>
-        <TextBody bold>{name}</TextBody>
-        <TextBody className={styles.slug}>@{slug}</TextBody>
-      </div>
-      <ArrowBottom className={styles.icon} />
+      <Photo sizeType={'profile'} />
+      {!flat && (
+        <>
+          <div className={styles.body}>
+            <TextBody bold>{name}</TextBody>
+            <TextBody className={styles.slug}>@{slug}</TextBody>
+          </div>
+          <ArrowBottom className={styles.icon} />
+        </>
+      )}
     </Button>
   )
 }

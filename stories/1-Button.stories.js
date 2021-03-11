@@ -7,13 +7,11 @@ import Explore from '../components/icons/menu/Explore'
 import TextTitle from '../components/text/text-title'
 import ThemeButton from '../components/buttons/theme-button'
 import Stack from '../components/stack/stack'
-
+import { withKnobs, boolean } from '@storybook/addon-knobs'
 //Main Header Text
 export default {
   title: 'Buttons',
-  argTypes: {
-    backgroundColor: { control: 'color' }
-  }
+  decorators: [withKnobs]
 }
 //Headers Inside
 export const Normal = () => <Button children={'Normal'} />
@@ -31,4 +29,7 @@ export const NavButton = () => (
     <TextTitle>Explore</TextTitle>
   </NavigationButton>
 )
-export const Nav = () => <Navigation selectedKey="home" />
+export const Nav = () => {
+  const flat = boolean('Flat', false)
+  return <Navigation flat={flat} selectedKey="home" />
+}

@@ -4,18 +4,18 @@ import TextTitle from '../text/text-title'
 import * as menuItems from '../icons/menu'
 let { Twitter } = menuItems
 let navMenuItems = [
-  'Home',
-  'Explore',
-  'Notification',
-  'Messages',
-  'Bookmark',
-  'Lists',
-  'Profile',
-  'More'
+  { key: 'Home', notify: 0, selectedIcon: 'HomeFill' },
+  { key: 'Explore', notify: false, selectedIcon: 'ExploreFill' },
+  { key: 'Notification', notify: 3, selectedIcon: 'NotificationFill' },
+  { key: 'Messages', notify: 44, selectedIcon: 'MessagesFill' },
+  { key: 'Bookmark', notify: 6, selectedIcon: 'BookmarkFill' },
+  { key: 'Lists', selectedIcon: 'ListsFill' },
+  { key: 'Profile', notify: 1, selectedIcon: 'ProfileFill' },
+  { key: 'More', selectedIcon: 'More' }
 ]
 import styles from './navigation.module.css'
 
-function Navigation({ selectedKey }) {
+function Navigation({ selectedKey = 'home', flat = false }) {
   return (
     <nav className={styles.nav}>
       <NavigationButton>
@@ -23,55 +23,21 @@ function Navigation({ selectedKey }) {
       </NavigationButton>
 
       {navMenuItems.map((item) => {
-        let MenuItem = menuItems[item]
+        let _selected = selectedKey.toLowerCase() === item.key.toLowerCase()
+        let MenuItem = _selected
+          ? menuItems[item.selectedIcon]
+          : menuItems[item.key]
         return (
           <NavigationButton
-            selected={selectedKey.toLowerCase() === item.toLowerCase()}
-            notify={item.toLowerCase() === 'notification' ? 4 : false}
+            key={item.key}
+            notify={item.notify != null ? item.notify : false}
+            selected={_selected}
           >
             <MenuItem />
-            <TextTitle>{item}</TextTitle>
+            {!flat && <TextTitle>{item.key}</TextTitle>}
           </NavigationButton>
         )
       })}
-      {/*<NavigationButton>*/}
-      {/*  <Home />*/}
-      {/*</NavigationButton>*/}
-
-      {/*<NavigationButton>*/}
-      {/*  <Explore />*/}
-      {/*  <TitleBold>Explore</TitleBold>*/}
-      {/*</NavigationButton>*/}
-
-      {/*<NavigationButton>*/}
-      {/*  <Notification />*/}
-      {/*  <TitleBold>Notification</TitleBold>*/}
-      {/*</NavigationButton>*/}
-
-      {/*<NavigationButton>*/}
-      {/*  <Messages />*/}
-      {/*  <TitleBold>Messages</TitleBold>*/}
-      {/*</NavigationButton>*/}
-
-      {/*<NavigationButton>*/}
-      {/*  <Bookmark />*/}
-      {/*  <TitleBold>Bookmark</TitleBold>*/}
-      {/*</NavigationButton>*/}
-
-      {/*<NavigationButton>*/}
-      {/*  <Lists />*/}
-      {/*  <TitleBold>Lists</TitleBold>*/}
-      {/*</NavigationButton>*/}
-
-      {/*<NavigationButton>*/}
-      {/*  <Profile />*/}
-      {/*  <TitleBold>Profile</TitleBold>*/}
-      {/*</NavigationButton>*/}
-
-      {/*<NavigationButton>*/}
-      {/*  <More />*/}
-      {/*  <TitleBold>More</TitleBold>*/}
-      {/*</NavigationButton>*/}
     </nav>
   )
 }

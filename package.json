@@ -16,25 +16,24 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.6",
-    "next": "^10.0.6",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@storybook/addon-actions": "^6.1.16",
-    "@storybook/addon-essentials": "^6.1.16",
-    "@storybook/addon-links": "^6.1.16",
-    "@storybook/react": "^6.1.16",
-    "@svgr/cli": "^5.5.0",
-    "autoprefixer": "^10.2.4",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.0.1",
-    "postcss": "^8.2.4",
+    "@babel/core": "^7.10.2",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "@svgr/cli": "^5.4.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "postcss-custom-media": "^7.0.8",
     "postcss-loader": "^3.0.0",
-    "postcss-nested": "^4.2.3",
-    "prettier": "^2.2.1",
-    "style-loader": "^2.0.0",
-    "tailwindcss": "^2.0.2"
+    "postcss-nested": "^4.2.1",
+    "prettier": "^2.0.5",
+    "style-loader": "^1.2.1"
   }
 }

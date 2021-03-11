@@ -1,10 +1,9 @@
 .photo{
     display: block;
-    width: 47px;
     flex-shrink: 0;
 }
 
 .img{
     border-radius: 99px;
-    width: 100%;
+    max-width: 100%;
 }
