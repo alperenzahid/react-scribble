@@ -1,4 +1,5 @@
 .button {
+   text-decoration: none;
    cursor: pointer;
    background: transparent;
    color: var(--c-text-color);
@@ -10,7 +11,7 @@
 
    &:hover {
       color: var(--c-theme);
-      background-color: var(--c-theme-20);
+      background-color: var(--c-theme-10);
    }
 }
 

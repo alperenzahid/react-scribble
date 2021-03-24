@@ -4,12 +4,32 @@ export default {
 }
 
 export const NAV_MENU_ITEM = [
-  { key: 'Home', notify: 0, selectedIcon: 'HomeFill' },
-  { key: 'Explore', notify: false, selectedIcon: 'ExploreFill' },
-  { key: 'Notification', notify: 3, selectedIcon: 'NotificationFill' },
-  { key: 'Messages', notify: 44, selectedIcon: 'MessagesFill' },
-  { key: 'Bookmark', notify: 6, selectedIcon: 'BookmarkFill' },
-  { key: 'Lists', selectedIcon: 'ListsFill' },
-  { key: 'Profile', notify: 1, selectedIcon: 'ProfileFill' },
-  { key: 'More', selectedIcon: 'More' }
+  { key: 'Home', path: '/', notify: 0, selectedIcon: 'HomeFill' },
+  {
+    key: 'Explore',
+    path: '/exploreit',
+    notify: false,
+    selectedIcon: 'ExploreFill'
+  },
+  {
+    key: 'Notifications',
+    path: '/notifications',
+    notify: 3,
+    selectedIcon: 'NotificationsFill'
+  },
+  {
+    key: 'Messages',
+    path: '/messages',
+    notify: 44,
+    selectedIcon: 'MessagesFill'
+  },
+  {
+    key: 'Bookmarks',
+    path: '/bookmarks',
+    notify: 6,
+    selectedIcon: 'BookmarksFill'
+  },
+  { key: 'Lists', path: '/lists', selectedIcon: 'ListsFill' },
+  { key: 'Profile', path: '/profile', notify: 1, selectedIcon: 'ProfileFill' },
+  { key: 'More', path: '/more', selectedIcon: 'More' }
 ]

@@ -15,7 +15,6 @@ export default function Photo({
   sizeType = 'default'
 }) {
   const size = SizeType[sizeType]
-  console.log('Size: ' + size)
   return (
     <div className={cn([styles.photo])} style={{ height: size, width: size }}>
       <img className={styles.img} src={src} alt={alt} />

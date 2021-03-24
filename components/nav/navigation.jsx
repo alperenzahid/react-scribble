@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 
 import NavigationButton from '../buttons/navigation-button'
 import TextTitle from '../text/text-title'
@@ -8,7 +9,10 @@ import { NAV_MENU_ITEM } from '../../constants'
 
 import styles from './navigation.module.css'
 
-function Navigation({ selectedKey = 'home', flat = false }) {
+function Navigation({ flat = false }) {
+  const router = useRouter()
+  const selectedKey =
+    router.pathname !== '/' ? router.pathname.replace('/', '') : 'home'
   return (
     <nav className={styles.nav}>
       <NavigationButton>
@@ -25,6 +29,8 @@ function Navigation({ selectedKey = 'home', flat = false }) {
             key={item.key}
             notify={item.notify != null ? item.notify : false}
             selected={_selected}
+            href={item.path}
+            className={styles.navButton}
           >
             <MenuItem />
             {!flat && <TextTitle>{item.key}</TextTitle>}
