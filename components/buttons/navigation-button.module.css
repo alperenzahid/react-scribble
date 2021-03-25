@@ -2,6 +2,9 @@
     position: relative;
     padding: 10px;
 
+    span{
+        color: white;
+    }
     svg {
         font-size: 26px;
 
@@ -10,6 +13,15 @@
             margin-right: 15px;
         }
     }
+
+    &:global(.navtwitter) {
+        color: var(--c-theme);
+
+        :global(html:not(.light)) & {
+            color: white
+        }
+    }
+
 }
 
 .notify {

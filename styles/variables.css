@@ -1,13 +1,34 @@
+
 :root{
-    --c-primary: #000;
-    --c-theme: rgb(29, 161, 242);
-    --c-theme-10: rgba(29, 161, 242, 0.1);
-    --c-theme-20: rgba(29, 161, 242, 0.2);
-    --c-border-color: #2F3336;
-    --c-gray: #6E767D;
-    --c-dark-gray: #202327;
-    --c-text-color: #FFFFFF;
 
-
-    --fade: 120ms;
+        --c-theme: rgb(29, 161, 242);
+        --c-theme-10: rgba(29, 161, 242, 0.1);
+        --c-theme-20: rgba(29, 161, 242, 0.2);
+        --fade: 120ms;
 }
+
+.light:root {
+        --c-primary: #fff;
+        --c-border-color: rgb(230,236,240);
+        --c-gray: #6E767D;
+        --c-dark-gray: #202327;
+        --c-text-color: #000;
+    }
+
+.dim:root {
+        --c-primary: rgb(21,32,43);
+        --c-border-color: #2F3336;
+        --c-gray: #6E767D;
+        --c-dark-gray: #202327;
+        --c-text-color: #FFFFFF;
+}
+
+.dark:root {
+        --c-primary: #000;
+        --c-border-color: #2F3336;
+        --c-gray: #6E767D;
+        --c-dark-gray: #202327;
+        --c-text-color: #FFFFFF;
+    }
+
+

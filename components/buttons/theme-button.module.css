@@ -1,6 +1,6 @@
 .button {
     background-color: var(--c-theme);
-    color: var(--c-text-color);
+    color: white;
     padding: 0 15px;
     height: 40px;
     min-width: 40px;
