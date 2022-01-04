@@ -7,7 +7,3 @@
 - [Storybook](https://storybook.js.org)
 - [Svgr](https://react-svgr.com)
 
-### TODO
-- [X] Sample
-- [ ] Sample2
-- [ ] Sample3
