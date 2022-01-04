@@ -1,4 +1,4 @@
-Twitter Menu Clone 
+Twitter Navigation Menu Clone 
 
 ### Links
 - [Website](https://react-scribble.vercel.app/more)
